@@ -1,4 +1,8 @@
 package Cuentas;
+/**
+ *Clase que representa a una cuenta 
+ ** @author Chaima
+ **/
 public class CCuenta {
 
 
@@ -47,15 +51,23 @@ public class CCuenta {
 	public double getTipoInterés() {
 		return tipoInterés;
 	}
-
+	
 	public void setTipoInterés(double tipoInterés) {
 		this.tipoInterés = tipoInterés;
 	}
 
+	/**
+	 *Devuelve estado de la cuenta 
+	 ** @return  saldo de la cuenta 
+	 **/
 	public double estado()
     {
         return saldo;
     }
+	/**Ingresa una cantidad en la cuenta 
+	 * @parm Cantidad a ingresar
+	 *  @trows Exception si cantidad es negativa 
+	 * */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -63,6 +75,11 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");
         saldo = saldo + cantidad;
     }
+    
+    /**Retira una cantidad en la cuenta 
+	 * @parm Cantidad a retirar
+	 *  @trows Exception si cantidad es negativa o cero
+	 * */
 
     public void retirar(double cantidad) throws Exception
     {
